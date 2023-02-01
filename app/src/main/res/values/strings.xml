@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+
+    <string-array name="news_categories">
+        <item>top news</item>
+        <item>business</item>
+        <item>entertainment</item>
+        <item>general</item>
+        <item>health</item>
+        <item>science</item>
+        <item>sports</item>
+        <item>technology</item>
+    </string-array>
+
+
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_layout">Tab Layout</string>
+    <string name="search">search</string>
+    <string name="read_the_full_article">Read the full article</string>
+    <string name="go_back">Go Back</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="top_news_country">Top News Country:</string>
+    <string name="there_is_no_data_in_local_database_please_pull_to_refresh">There is no data in local database. Please pull to refresh.</string>
+    <string name="there_is_no_data_in_favorite_add_some_news_as_favorite">There is no data in favorite. Add some news as favorite</string>
+    <string name="news_app">News App</string>
+    <string name="all">all</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="content">content</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
+    <string name="select_layout">Select Layout</string>
+</resources>

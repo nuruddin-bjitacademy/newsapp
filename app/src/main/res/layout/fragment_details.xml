@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="100dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/news_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:elevation="-1dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/celling_rounded_rectangle"
+
+                tools:layout_editor_absoluteX="0dp" />
+
+            <ImageView
+                android:id="@+id/shadow_bottom"
+                android:src="@drawable/bottom_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toBottomOf="@+id/news_image"
+                />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#515151"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                tools:text="Nur Uddin"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/news_image"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#515151"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                tools:text="10 hours ago"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/news_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/round_white"
+                android:backgroundTint="@color/button_background"
+                android:paddingStart="3dp"
+                app:layout_constraintTop_toBottomOf="@+id/news_image"
+                tools:ignore="RtlSymmetry">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingStart="5dp"
+                    android:textColor="@color/title_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="This is a news Heading . It can be more or less but for now its okay to ckeck" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="15dp"
+                android:textColor="@color/info_text"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/layout_title"
+                tools:text="This is a news Heading . It can be more or less but for now its okay to ckeck" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="15dp"
+                android:textColor="@color/info_text"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                tools:text="This is a news Heading . It can be more or less but for now its okay to ckeck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/btn_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/button_background"
+        android:src="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/rounded_rectangle" />
+
+    <ImageView
+        android:id="@+id/favorite"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_twotone_favorite_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_read_full_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/round_white"
+        android:backgroundTint="@color/button_background"
+        android:text="@string/read_the_full_article"
+        android:textAllCaps="false"
+        android:textColor="@color/button_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

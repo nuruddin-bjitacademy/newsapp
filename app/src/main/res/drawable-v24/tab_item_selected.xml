@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item>
+        <shape
+            android:shape="rectangle"
+            android:padding="5dp">
+            <solid android:color="@color/tab_item_background" />
+        </shape>
+    </item>
+    <item
+        android:start="5dp"
+        android:end="5dp"
+        android:top="5dp"
+        android:bottom="5dp">
+        <shape
+            android:shape="rectangle"
+            android:padding="5dp">
+            <solid android:color="@color/tag_background"/> <!-- this one is ths color of the Rounded Button -->
+            <corners
+                android:bottomRightRadius="10dp"
+                android:bottomLeftRadius="10dp"
+                android:topLeftRadius="10dp"
+                android:topRightRadius="10dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+<!--    <color name="white">#171717</color>-->
+
+    // Custom color
+    <color name="red">#FF0000</color>
+    <color name="colorBackground">#f9f9fa</color>
+    <color name="colorTextSubtitle">#A6A6A6</color>
+    <color name="colorTextTitle">#DCDCDC</color>
+    <color name="tab">#000000</color>
+    <color name="dark_blue">#f9f9fa</color>
+    <color name="tag_background">#FFAB91</color>
+
+
+    <color name="title_text">#BCBCBC</color>
+
+    <color name="app_bar_background">#1e222c</color>
+
+    <color name="tab_item_foreground">#485268</color>
+    <color name="tab_item_background">#1e222c</color>
+
+    <color name="info_text">#A5A5A5</color>
+    <color name="button_text">#FFFFFF</color>
+
+    <color name="button_background">#242935</color>
+
+    <color name="bottom_nav_background">#13161C</color>
+
+    <color name="background">#1e222c</color>
+    <color name="tab_background">#242935</color>
+
+    <color name="color_on_background">#242935</color>
+    <color name="primary">@android:color/holo_blue_dark</color>
+
+
+
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/whole_news"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/tab_background"
+        app:cardBackgroundColor="@color/tab_background"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_unavailable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/rounded_rectangle" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/info_text"
+                android:singleLine="true"
+                tools:text="Author: Names here"
+                android:textSize="16sp"
+                android:paddingStart="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/title"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintEnd_toStartOf="@+id/favorite"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingStart="5dp"
+                android:textColor="@color/title_text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img"
+                app:layout_constraintTop_toTopOf="@+id/img"
+                app:layout_constraintBottom_toBottomOf="@+id/img"
+                tools:text="This is a news head line it can be so long but this is just for fun"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textColor="@color/info_text"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="Motor.ai" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textColor="@color/info_text"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/source"
+                app:layout_constraintTop_toTopOf="@+id/source"
+                tools:text=" . 10 hours ago" />
+
+            <ImageView
+                android:id="@+id/favorite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_twotone_favorite_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>
+
+

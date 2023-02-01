@@ -1,0 +1,39 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.NewsApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@android:color/holo_blue_dark</item>
+<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+        <item name="colorPrimaryVariant">@android:color/holo_blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!--<style name="MyAppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>-->
+
+    <style name="rounded_rectangle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+    <style name="celling_rounded_rectangle" parent="">
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="android:topRightRadius">0dp</item>
+        <item name="cornerSizeTopLeft">0%</item>
+        <item name="cornerSizeTopRight">0%</item>
+        <item name="cornerSizeBottomLeft">3%</item>
+        <item name="cornerSizeBottomRight">3%</item>
+
+    </style>
+
+    <style name="mySpinnerItemSelectedStyle" parent="@android:style/Widget.Holo.TextView.SpinnerItem">
+        <item name="android:textColor">@color/tab_item_foreground</item>
+    </style>
+</resources>

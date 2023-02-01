@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoriesFragment">
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.graphicless.newsapp.ui.fragment.FavoriteFragment"
+        android:label="Favorites" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.graphicless.newsapp.ui.fragment.WebViewFragment"
+        android:label="Full News"
+        tools:layout="@layout/fragment_web_view" >
+        <action
+            android:id="@+id/action_webViewFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <argument
+            android:name="article"
+            app:argType="com.graphicless.newsapp.model.Article" />
+        <argument
+            android:name="favorite"
+            app:argType="boolean" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <argument
+            android:name="source"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="cameFrom"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.graphicless.newsapp.ui.fragment.CategoriesFragment"
+        android:label="Top News" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.graphicless.newsapp.ui.fragment.DetailsFragment"
+        android:label="DetailsFragment" >
+        <action
+            android:id="@+id/action_detailsFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <argument
+            android:name="article"
+            app:argType="com.graphicless.newsapp.model.Article" />
+        <argument
+            android:name="favorite"
+            app:argType="boolean" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <argument
+            android:name="source"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_detailsFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <argument
+            android:name="cameFrom"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.graphicless.newsapp.ui.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
